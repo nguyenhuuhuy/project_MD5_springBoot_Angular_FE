@@ -6,12 +6,12 @@
   </div>
   <br>
 
-  <div class="short" style="margin-left: 1%;margin-top: 2%">
+  <div class="short" style="margin-top: 2%">
     <h1>
       <p class="text_list_update">
         <a href="" class="dropdown-item text-light bg-dark">
-          <mat-icon>shuffle</mat-icon>
-          Hôm Nay Xem Gì
+          <i class="fa-solid fa-shuffle" style="margin-left: 1%"></i>
+          Hôm nay xem gì
         </a>
       </p>
     </h1>
@@ -30,7 +30,7 @@
             </div>
             <div class="product_details">
               <h5><a routerLink="/detailStory/{{rd.id}}">{{rd.name}}</a></h5>
-              <span>Chương {{rd.chapterList.length}}</span>
+              <a routerLink="/homeChapterImage/{{rd.chapterList[rd.chapterList.length-1].id}}" style="color: snow">Chương {{rd.chapterList.length}}</a>
             </div>
           </div>
         </div>
@@ -39,11 +39,11 @@
   </div>
 
 
-  <div class="short" style="margin-left: 1%;margin-top: 2%">
+  <div class="short" style="margin-top: 2%">
     <h1>
       <p class="text_list_update">
         <a href="" class="dropdown-item text-light bg-dark">
-          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star" style="margin-left: 1%"></i>
           TOP 10 truyện được xem nhiều nhất
         </a>
       </p>
@@ -60,18 +60,18 @@
           <h5 class="card-title">
             <a routerLink="/detailStory/{{top.id}}">{{top.name}}</a>
           </h5>
-          <p class="card-text">Chương {{top.chapterList.length}}</p>
+          <a class="card-text" routerLink="/homeChapterImage/{{top.chapterList[top.chapterList.length-1].id}}" style="color: snow;">Chương {{top.chapterList.length}}</a>
         </div>
       </div>
     </div>
   </div>
 
 
-  <div class="short" style="margin-left: 1%;margin-top: 2%">
+  <div class="short" style="margin-top: 2%">
     <h1>
       <p class="text_list_update">
         <a href="" class="dropdown-item text-light bg-dark">
-          <i class="fa-solid fa-cloud"></i>
+          <i class="fa-solid fa-cloud" style="margin-left: 1%"></i>
           Truyện mới cập nhập
         </a>
       </p>
@@ -87,7 +87,7 @@
           <h5 class="card-title">
             <a routerLink="/detailStory/{{st.id}}">{{st.name}}</a>
           </h5>
-          <p class="card-text">Chương {{st.chapterList.length}}</p>
+          <a class="card-text" routerLink="/homeChapterImage/{{st.chapterList[st.chapterList.length-1].id}}" style="color:snow;">Chương {{st.chapterList.length}}</a>
         </div>
       </div>
     </div>

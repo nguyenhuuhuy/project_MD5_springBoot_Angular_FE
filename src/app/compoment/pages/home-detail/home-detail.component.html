@@ -27,13 +27,14 @@
                     <p>Tác Giả: {{story?.author?.name}}</p>
                     <p>Tên Khác: {{story?.author?.authorAlias}}</p>
                     <div style="display: flex">
-                      <mat-icon (click)="likeStory()">favorite</mat-icon>
-                      <p style="margin-left: 1%">Lượt yêu thích: {{story?.likeList?.length}}</p>
+                      <mat-icon (click)="likeStory()" style="color: red">favorite</mat-icon>
+                      <p style="margin-left: 1%" >Lượt yêu thích: {{story?.likeList?.length}}</p>
                     <mat-error style="margin-left: 2%">{{status}}</mat-error>
                     </div>
                     <p>view: {{story?.totalView}}</p>
                     <strong>Thể Loại:</strong>
-                    <span class="posted_in" *ngFor="let ct of story?.categoryList">  <a href="#">{{ct.name}}</a></span>
+                    <span class="posted_in" *ngFor="let ct of story?.categoryList">  <a routerLink="/detailCategory/{{ct.id}}">{{ct.name}}</a></span>
+                    <p>Tình Trạng:  {{story?.status == false ? 'Chưa Hoàn Thành':'Đã Hoàn Thành'}}</p>
                     <h6>Giới thiệu: </h6>
                     <p>{{story?.content}}</p>
                   </div>

@@ -54,6 +54,9 @@ import { HomeDetailComponent } from './compoment/pages/home-detail/home-detail.c
 import { HomeChapterImageComponent } from './compoment/pages/home-chapter-image/home-chapter-image.component';
 import {CheckLoginGuard} from "./service/CheckLoginGuard";
 import {CheckRoleUser} from "./service/CheckRoleUser";
+import { HomeDetailCategoryComponent } from './compoment/pages/home-detail-category/home-detail-category.component';
+import { UpdateChapterImageComponent } from './compoment/contents/chapterImage/update-chapter-image/update-chapter-image.component';
+import { DeleteChapterImageComponent } from './compoment/contents/chapterImage/delete-chapter-image/delete-chapter-image.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +94,9 @@ import {CheckRoleUser} from "./service/CheckRoleUser";
     RenderPageStoryComponent,
     HomeDetailComponent,
     HomeChapterImageComponent,
+    HomeDetailCategoryComponent,
+    UpdateChapterImageComponent,
+    DeleteChapterImageComponent,
   ],
     imports: [
         HttpClientModule,

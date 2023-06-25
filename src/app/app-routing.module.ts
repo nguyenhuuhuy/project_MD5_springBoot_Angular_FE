@@ -19,6 +19,7 @@ import {HomeDetailComponent} from "./compoment/pages/home-detail/home-detail.com
 import {HomeChapterImageComponent} from "./compoment/pages/home-chapter-image/home-chapter-image.component";
 import {CheckLoginGuard} from "./service/CheckLoginGuard";
 import {CheckRoleUser} from "./service/CheckRoleUser";
+import {HomeDetailCategoryComponent} from "./compoment/pages/home-detail-category/home-detail-category.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -34,12 +35,9 @@ const routes: Routes = [
   {path:'chapter',component:ListChapterComponent,  canActivate:[CheckRoleUser]},
   {path:'chapterImage',component:ListChapterImageComponent, canActivate:[CheckRoleUser]},
   {path:'detailChapter',component:DetailChapterComponent},
-  {
-    path:'detailStory/:id',component:HomeDetailComponent
-  },
-  {
-    path:'homeChapterImage/:id',component:HomeChapterImageComponent
-  }
+  {path:'detailCategory/:id',component:HomeDetailCategoryComponent},
+  {path:'detailStory/:id',component:HomeDetailComponent},
+  {path:'homeChapterImage/:id',component:HomeChapterImageComponent}
 
 ];
 

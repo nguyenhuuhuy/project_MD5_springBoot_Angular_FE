@@ -19,7 +19,6 @@ constructor(@Inject(MAT_DIALOG_DATA)
 }
 
   ngOnInit(): void {
-    console.log('data tu inject --->', this.data.dataKey)
     this.chapterService.getChapterId(this.data.dataKey).subscribe(data=>{
       this.chapter = data;
     })

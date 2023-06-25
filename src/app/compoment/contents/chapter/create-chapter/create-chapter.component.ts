@@ -29,8 +29,14 @@ export class CreateChapterComponent implements OnInit{
     )
     console.log(this.chapter)
     this.chapterService.createChapter(this.chapter).subscribe(data=>{
-      if (data.message == "create_success"){
-        this.status = "TAO CHAP THANH CONG"
+      if (data.message == "access_denied"){
+        this.status = "KHÔNG PHẢI ADMIN KHÔNG CÓ QUYỀN SỬA"
+      }else if (data.message == 'name_existed'){
+        this.status = "TRÙNG TÊN CHAPTER"
+      } else if (data.message == 'not_found_story'){
+        this.status = 'CẦN THÊM TRUYỆN CHO CHAPTER'
+      } else if (data.message == 'create_success'){
+        this.status = 'TẠO MỚI THÀNH CÔNG'
       }
     })
   }
